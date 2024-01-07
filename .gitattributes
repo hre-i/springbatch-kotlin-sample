@@ -1,0 +1,8 @@
+*               text eol=lf
+*.bat           text eof=crlf
+*.cmd           text eof=crlf
+*.ps1           text eof=crlf
+*.xlsx          -text
+*.jar           -text
+*.zip           -text
+*.war           -text

@@ -1,0 +1,22 @@
+spring:
+  profiles:
+    active: ${SPRING_PROFILE_ACTIVE:local}
+
+  datasource:
+    url:  jdbc:postgresql://localhost:5432/sample
+    driver-class-name: org.postgresql.Driver
+    username: sample
+    password: sample
+
+  batch:
+    jdbc:
+      initialize-schema: always
+    job:
+      name: ${job.name:helpMessage}
+      enabled: true
+
+  sql:
+    init:
+      encoding: UTF-8
+      mode: always
+      schema-locations: classpath:schema-all.sql
